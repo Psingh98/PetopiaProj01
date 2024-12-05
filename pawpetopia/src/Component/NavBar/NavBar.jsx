@@ -2,11 +2,11 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import logo from '../../assets/petopia_logo.png';
-import './NavBar.css'; // Import the custom CSS file
+import './NavBar.css'; 
 
 const NavBar = () => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="container-fluid">
         <Link className="navbar-brand" to="/">
           <img src={logo} alt="Petopia Logo" className="logo" />
@@ -15,22 +15,24 @@ const NavBar = () => {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav">
+          <ul className="navbar-nav me-auto">
             <li className="nav-item">
               <Link className="nav-link active" aria-current="page" to="/">Home</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/about">Adopt</Link>
+              <Link className="nav-link" to="/adopt">Adopt</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/services">Donate</Link>
+              <Link className="nav-link" to="/donate">Donate</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/contact">About us</Link>
+              <Link className="nav-link" to="/aboutUs">About us</Link>
             </li>
             <li className="nav-item">
               <Link className="nav-link" to="/Register-Login">Get Started</Link>
             </li>
+          </ul>
+          <ul className="navbar-nav ms-auto">
             <li className="nav-item dropdown">
               <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 More
