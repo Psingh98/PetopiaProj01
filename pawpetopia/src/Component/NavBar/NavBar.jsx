@@ -29,7 +29,7 @@ const NavBar = () => {
               <Link className="nav-link" to="/aboutUs">About us</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/Register-Login">Get Started</Link>
+              <Link className="nav-link" to="/Login">Get Started</Link>
             </li>
           </ul>
           <ul className="navbar-nav ms-auto">
