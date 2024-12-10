@@ -12,7 +12,7 @@ import FAQ from './Component/FAQ/FAQ'; // FAQ component
 import Terms from './Component/Terms/Terms'; // Terms of Service component
 import Footer from './Component/Footer/Footer'; // Footer component
 import NotFound from './Component/NotFound/NotFound'; // 404 Not Found component
-
+import './App.css'; 
 const App = () => {
   return (
     <div>
