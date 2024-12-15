@@ -12,11 +12,14 @@ import FAQ from './Component/FAQ/FAQ'; // FAQ component
 import Terms from './Component/Terms/Terms'; // Terms of Service component
 import Footer from './Component/Footer/Footer'; // Footer component
 import NotFound from './Component/NotFound/NotFound'; // 404 Not Found component
+import Stats from './Component/Stats/Stats'
+;
 import './App.css'; 
 const App = () => {
   return (
     <div>
       <Router>
+      <div className="app-container"> {/* Added a container for better styling */}
         <NavBar />
         <Routes>
           <Route path="/" element={<Home />} />
@@ -30,7 +33,8 @@ const App = () => {
           <Route path="/terms" element={<Terms />} />
           <Route path="*" element={<NotFound />} /> {/* Catch-all route for 404 */}
         </Routes>
-        <Footer />
+        {/* <Footer /> */}
+        </div>
       </Router>
     </div>
   );

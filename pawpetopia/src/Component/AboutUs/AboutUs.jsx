@@ -1,12 +1,32 @@
-import React from 'react'
+import React from 'react';
+import { useInView } from 'react-intersection-observer';
+import './AboutUs.css';
+import Stats from '../Stats/Stats';
 
 const AboutUs = () => {
-  return (
-    <div>
-      
-      <h1>Hello from AboutUs</h1>
-    </div>
-  )
-}
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.5,
+  });
 
-export default AboutUs
+  return (
+    <div className="about-us-container" ref={ref}>
+      {/* Background Elements */}
+      
+
+      <h1 className={`about-title ${inView ? 'fade-in' : ''}`}>About Us</h1>
+      <p className={`about-text ${inView ? 'fade-in' : ''}`}>
+        Welcome to our project! We are dedicated to bringing you the best services and experiences. Our team is composed of skilled professionals who are passionate about what they do.
+      </p>
+      <p className={`about-text ${inView ? 'fade-in' : ''}`}>
+        Our mission is to provide top-quality solutions that meet the needs of our users. We believe in innovation, excellence, and commitment to our clients.
+      </p>
+      <p className={`about-text ${inView ? 'fade-in' : ''}`}>
+        Thank you for visiting our PawPetopia site. We hope you find everything you're looking for. If you have any questions or need further assistance, please don't hesitate to contact us.
+      </p>
+    
+    </div>
+  );
+};
+
+export default AboutUs;
