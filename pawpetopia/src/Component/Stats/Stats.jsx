@@ -10,9 +10,9 @@ const Stats = () => {
   });
 
   const stats = [
-    { label: "Happy Adoptions", value: 1200, svg: "M10 20 L15 15 ...", color: "#007bff" },
-    { label: "Active Volunteers", value: 300, svg: "M5 10 L10 15 ...", color: "#28a745" },
-    { label: "Generous Donations", value: 1500, svg: "M2 5 L7 10 ...", color: "#ffc107" },
+    { label: "Happy Adoptions", value: 5, svg: "M10 20 L15 15 ...", color: "#007bff" },
+    { label: "Active Volunteers", value: 5, svg: "M5 10 L10 15 ...", color: "#28a745" },
+    { label: "Generous Donations", value: 10, svg: "M2 5 L7 10 ...", color: "#ffc107" },
   ];
 
   return (
@@ -29,7 +29,7 @@ const Stats = () => {
               <path d={stat.svg} fill={stat.color} />
             </svg>
             <h3 className="stat-value">
-              {inView && <CountUp end={stat.value} duration={2} />}+
+              {inView && <CountUp end={stat.value} duration={6} />}+
             </h3>
             <p className="stat-label">{stat.label}</p>
           </div>
