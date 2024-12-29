@@ -1,0 +1,96 @@
+body {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-color: white;
+  margin: 0;
+  padding: 0;
+  font-size: 17px;
+}
+.navbar {
+  position: static; /* Keep navbar static */
+  padding: 1px; /* Padding for the navbar */
+  background-color:white; /* Light background color */
+ /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); *//* Subtle shadow */
+}
+
+.logo {
+  height: 130px; /* Adjust logo height */
+  transition: height 0.3s ease; /* Smooth transition for logo resizing */
+}
+
+.navbar-nav {
+  list-style: none; /* Remove default list styles */
+  display: flex; /* Flexbox for horizontal layout */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+}
+
+.navbar-nav .nav-link {
+  margin: 0 33px; /* Space between nav links */
+  text-decoration: none; /* Remove underline */
+  color: #007bff; /* Default link color */
+  font-weight: 500; /* Font weight */
+  transition: color 0.3s; /* Smooth color transition */
+}
+
+.navbar-nav .nav-link:hover {
+  color: #ffcc00; /* Change color on hover */
+}
+
+.dropdown {
+  position: relative; /* Position for dropdown */
+}
+
+.dropdown-toggle {
+  cursor: pointer; /* Pointer cursor for dropdown */
+}
+
+.dropdown-menu {
+  position: absolute; /* Position dropdown menu */
+  top: 100%; /* Align below the dropdown toggle */
+  left: -13%; /* Align to the left */
+  background-color: rgb(194, 217, 247); /* Background color for dropdown */
+  box-shadow: 0 2px 5px rgba(83, 83, 83, 0.6); /* Shadow for dropdown */
+  display: none; /* Hide dropdown by default */
+  z-index:  1000; /* Ensure dropdown is above other elements */
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block; /* Show dropdown on hover */
+}
+
+.dropdown-item {
+  padding: 10px 20px; /* Padding for dropdown items */
+  color: #212529; /* Text color */
+  text-decoration: none; /* Remove underline */
+  display: block; /* Block display for full width */
+  font-size:15px ;
+}
+
+.dropdown-item:hover {
+  background-color: #f1f1f1; /* Background color on hover */
+}
+
+.dropdown-divider {
+  height: 1px; /* Height for divider */
+  background-color: #e9ecef; /* Divider color */
+  margin: 5px 0; /* Margin for spacing */
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0.5rem; /* Reduce padding on smaller screens */
+  }
+
+  .logo {
+    height: 50px; /* Smaller logo on mobile */
+  }
+
+  .navbar-nav {
+    flex-direction: column; /* Stack nav items vertically on mobile */
+    align-items: center; /* Center align items */
+  }
+
+  .navbar-nav .nav-link {
+    margin: 10px 0; /* Space between nav links on mobile */
+  }
+}
